@@ -8,7 +8,7 @@ To install JDK8 and Jmeter 5.1 with plugins on the Amazon Linux instance execute
 
 ### Preconditions:
 1. Amazon Linux EC2 instance with preinstalled jmeter (like described in the [install-jmeter.sh](https://github.com/stanislav-pimenov-epam/amazonlinux-jmeter/blob/master/install-jmeter.sh))
-2. You have SSH key file (.pem) was that was used for EC2 instance creation
+2. You have SSH key file (.pem) which was used for EC2 instance creation
 
 ### Upload test plan
 
@@ -30,9 +30,9 @@ Upload JMX test plan to home directory on EC2 instance
 
 * -n flag means “run JMeter in Non-GUI mode”
 * -t is used to specify path to jmx file
-* -l name of JTL file to log sample results to
+* -l specifies name of JTL file to log sample results to
 * -e generate report dashboard after load test
-* -o output folder where to generate the report dashboard after load test. Folder must not exist or be empty
+* -o output directory where to generate the report dashboard after load test. Directory should not exist or be empty
 
 2.2  Example
 
@@ -40,7 +40,7 @@ Upload JMX test plan to home directory on EC2 instance
 
 ##### 3. Download test execution results
 
-3.1 Archive the results to decrease data size to transder:
+3.1 Archive the results to decrease data size to transfer:
 
 `zip -r servicename.zip results/servicename`
 
