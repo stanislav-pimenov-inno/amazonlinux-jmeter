@@ -18,13 +18,13 @@ Upload JMX test plan to home directory on EC2 instance
 
 ### Execute test plan
 
-1. Connect by SSH
+##### 1. Connect by SSH
 
 `ssh -i /path/to/pem-file ec2-user@<ec2-instance-internal-ip>`
 
-2. Start test execution
+##### 2. Start test execution
 
-2.1  Jmeter command line options
+2.1 Jmeter command line options
 
 `jmeter -n -t [jmx_path] -l results/results.jtl -e -o results`
 
@@ -38,12 +38,12 @@ Upload JMX test plan to home directory on EC2 instance
 
 `nohup jmeter -n -t servicename.jmx -l results/servicename/summary.jtl -e -o results/servicename &`
 
-3. Download test execution results
+##### 3. Download test execution results
 
-Archive the results to decrease data size to transder:
+3.1 Archive the results to decrease data size to transder:
 
 `zip -r servicename.zip results/servicename`
 
-Download to you local machine:
+3.2 Download to you local machine:
 
 `scp -i /path/to/pem-file -r ec2-user@<ec2-instance-internal-ip>:~/servicename.zip ~/path/to/save/results`
