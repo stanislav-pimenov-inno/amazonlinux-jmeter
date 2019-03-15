@@ -17,3 +17,5 @@ curl -fsSL --compressed -o /tmp/jmeter.tgz https://archive.apache.org/dist/jmete
 
 echo "export JMETER_HOME=/opt/apache-jmeter-$JMETER_VERSION" >> ~/.bashrc
 echo "export PATH=\$PATH:/opt/apache-jmeter-$JMETER_VERSION/bin" >> ~/.bashrc
+
+source ~/.bashrc
