@@ -7,7 +7,7 @@ To install JDK8 and Jmeter 5.1 with plugins on the Amazon Linux instance execute
 ## Execute Performance Tests from Remote EC2
 
 ### Preconditions:
-1. Amazon Linux EC2 instance with preinstalled jmeter (like described in the `install-jmeter.sh`)
+1. Amazon Linux EC2 instance with preinstalled jmeter (like described in the [install-jmeter.sh](https://github.com/stanislav-pimenov-epam/amazonlinux-jmeter/blob/master/install-jmeter.sh))
 2. You have SSH key file (.pem) was that was used for EC2 instance creation
 
 ### Upload test plan
