@@ -46,4 +46,4 @@ Upload JMX test plan to home directory on EC2 instance
 
 3.2 Download to you local machine:
 
-`scp -i /path/to/pem-file -r ec2-user@<ec2-instance-internal-ip>:~/servicename.zip ~/path/to/save/results`
+`scp -i [pem_file_path] -r ec2-user@<ec2-instance-internal-ip>:~/servicename.zip [path_to_save]`
