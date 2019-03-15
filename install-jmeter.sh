@@ -1,5 +1,6 @@
-yum install java-1.8.0-openjdk
-yum remove java-1.7.0-openjdk
+#!/bin/bash
+yum -y install java-1.8.0-openjdk
+yum -y remove java-1.7.0-openjdk
 
 JMETER_VERSION="5.1"
 CMDRUNNER_VERSION="2.2"
@@ -14,8 +15,7 @@ curl -fsSL --compressed -o /tmp/jmeter.tgz https://archive.apache.org/dist/jmete
     && sleep 2 \
     && /opt/apache-jmeter-$JMETER_VERSION/bin/PluginsManagerCMD.sh status
 
-
-echo "export JMETER_HOME=/opt/apache-jmeter-$JMETER_VERSION" >> ~/.bashrc
-echo "export PATH=\$PATH:/opt/apache-jmeter-$JMETER_VERSION/bin" >> ~/.bashrc
-
-source ~/.bashrc
+echo "Setting environment variable JMETER_HOME and adding \$JMETER_HOME/bin to the .bashrc" \
+  && echo "export JMETER_HOME=/opt/apache-jmeter-$JMETER_VERSION" >> ~/.bashrc \
+  && echo "export PATH=\$PATH:/opt/apache-jmeter-$JMETER_VERSION/bin" >> ~/.bashrc \
+  && source ~/.bashrc
