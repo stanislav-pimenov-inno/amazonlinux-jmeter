@@ -15,6 +15,5 @@ curl -fsSL --compressed -o /tmp/jmeter.tgz https://archive.apache.org/dist/jmete
     && sleep 2 \
     && sudo /opt/apache-jmeter-$JMETER_VERSION/bin/PluginsManagerCMD.sh status
 
-echo "export JMETER_HOME=/opt/apache-jmeter-$JMETER_VERSION" >> ~/.bashrc \
-  && echo "export PATH=\$PATH:/opt/apache-jmeter-$JMETER_VERSION/bin" >> ~/.bashrc \
-  && source ~/.bashrc
+echo "export JMETER_HOME=/opt/apache-jmeter-$JMETER_VERSION" >> /home/ec2-user/.bashrc \
+  && echo "export PATH=\$PATH:/opt/apache-jmeter-$JMETER_VERSION/bin" >> /home/ec2-user/.bashrc
