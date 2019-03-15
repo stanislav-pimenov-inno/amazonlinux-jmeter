@@ -14,13 +14,13 @@ To install JDK8 and Jmeter 5.1 with plugins on the Amazon Linux instance execute
 
 Upload JMX test plan to home directory on EC2 instance
 
-`scp -i /path/to/pem-file /path/to/jmx-file ec2-user@<ec2-instance-internal-ip>:~` 
+`scp -i [pem_file_path] [jmx_path] ec2-user@<ec2-instance-internal-ip>:~` 
 
 ### Execute test plan
 
 ##### 1. Connect by SSH
 
-`ssh -i /path/to/pem-file ec2-user@<ec2-instance-internal-ip>`
+`ssh -i [pem_file_path] ec2-user@<ec2-instance-internal-ip>`
 
 ##### 2. Start test execution
 
