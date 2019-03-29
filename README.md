@@ -38,6 +38,8 @@ Upload JMX test plan to home directory on EC2 instance
 
 `nohup jmeter -n -t servicename.jmx -l results/servicename/summary.jtl -e -o results/servicename &`
 
+**NOTE**: do not use `nohup [command] &` if you want to monitor summary in the runtime
+
 ##### 3. Download test execution results
 
 3.1 Archive the results to decrease data size to transfer:
@@ -47,3 +49,14 @@ Upload JMX test plan to home directory on EC2 instance
 3.2 Download to you local machine:
 
 `scp -i [pem_file_path] -r ec2-user@<ec2-instance-internal-ip>:~/servicename.zip [path_to_save]`
+
+## Jmeter reporting
+
+If you need additional charts and reports except those which are provided with the help of jmeter commandline options
+then add output into csv file like shown on the screenshot for `Response time` report. 
+
+![](img/jmeter-reporting.png)
+
+## Useful links
+
+In order to make a RPS based testing use [https://www.blazemeter.com/blog/using-jmeters-throughput-shaping-timer-plugin](https://www.blazemeter.com/blog/using-jmeters-throughput-shaping-timer-plugin)
